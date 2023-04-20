@@ -113,7 +113,7 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.zvamoda"
+    namespace 'zw.org.zvandiri.zvamoda'
     defaultConfig {
         applicationId 'zw.org.zvandiri.zvamoda'
         minSdkVersion rootProject.ext.minSdkVersion

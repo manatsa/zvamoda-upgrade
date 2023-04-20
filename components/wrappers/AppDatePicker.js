@@ -6,13 +6,11 @@ import {
   View,
 } from "react-native";
 import React from "react";
-import DateTimePicker from "@react-native-community/datetimepicker";
 import { useFormikContext } from "formik";
 import Colors from "../../config/Colors";
 import AppText from "./AppText";
 import { IconButton } from "react-native-paper";
 import { AppErrorMessage } from "../form";
-import AppTextInput from "./AppTextInput";
 import DatePicker from "react-native-date-picker";
 
 export default function AppDatePicker({ name, label, placeholder, color }) {
