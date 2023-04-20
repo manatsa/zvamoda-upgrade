@@ -2,29 +2,40 @@
   "expo": {
     "name": "zvamoda",
     "slug": "zvamoda",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "version": "2.5.0",
+    "orientation": "default",
+    "icon": "./assets/applogo.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#E6E6FA"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "requireFullScreen": true,
+      "bundleIdentifier": "zw.org.zvandiri.zvamoda"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "foregroundImage": "./assets/applogo.png",
+        "backgroundColor": "#E6E6FA"
+      },
+      "package": "zw.org.zvandiri.zvamoda",
+      "versionCode": 6
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/applogo.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f865a24c-84ab-43b2-ae88-5da368318f81"
+      }
     }
   }
 }

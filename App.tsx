@@ -1,20 +1,37 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+
+import { decode, encode } from "base-64";
+import MainStackNavigation from "./navigation/MainStackNavigation";
+import { StyleSheet } from "react-native";
+import { ToastProvider } from "react-native-toast-notifications";
+import { Provider } from "react-native-paper";
+import { navigationRef } from "./navigation/RootNavigation";
+
+if (!global.btoa) {
+  global.btoa = encode;
+}
+
+if (!global.atob) {
+  global.atob = decode;
+}
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider>
+      <ToastProvider>
+        <NavigationContainer ref={navigationRef}>
+          <MainStackNavigation />
+        </NavigationContainer>
+      </ToastProvider>
+    </Provider>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  floatContainer: {
+    width: "100%",
+    height: "100%",
   },
+  actions: { fontSize: 16, fontWeight: "bold" },
 });
